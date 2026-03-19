@@ -3,8 +3,8 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
-from typing import List
+from dataclasses import dataclass, field
+from typing import List, Optional
 
 CHANGE_TYPE_PATTERNS = {
     "lr_change": [r"learning.?rate", r"\blr\b", r"step.?size"],
@@ -25,6 +25,25 @@ CHANGE_TYPE_PATTERNS = {
         r"augment", r"random.?crop", r"flip", r"mixup",
         r"cutout", r"cutmix",
     ],
+    "batch_size_change": [
+        r"batch.?size", r"mini.?batch", r"micro.?batch",
+    ],
+    "warmup_change": [
+        r"warmup", r"warm.?up", r"ramp.?up",
+    ],
+    "weight_init_change": [
+        r"weight.?init", r"xavier", r"kaiming", r"glorot",
+        r"he.?init", r"orthogonal.?init",
+    ],
+    "loss_function_change": [
+        r"loss.?func", r"cross.?entropy", r"focal.?loss",
+        r"contrastive", r"triplet.?loss", r"mse.?loss",
+        r"label.?smooth.?loss",
+    ],
+    "data_preprocessing_change": [
+        r"preprocess", r"normali[sz]", r"tokeniz",
+        r"clean", r"filter", r"transform",
+    ],
 }
 
 
@@ -38,6 +57,7 @@ class ExperimentRecord:
     status: str
     description: str
     change_type: str
+    timestamp: Optional[str] = field(default=None)
 
 
 class ExperimentParser:
@@ -58,6 +78,7 @@ class ExperimentParser:
                 continue
             description = parts[4].strip()
             change_type = self._categorize(description)
+            timestamp = parts[5].strip() if len(parts) > 5 else None
             records.append(
                 ExperimentRecord(
                     commit=parts[0].strip(),
@@ -66,6 +87,7 @@ class ExperimentParser:
                     status=parts[3].strip(),
                     description=description,
                     change_type=change_type,
+                    timestamp=timestamp,
                 )
             )
         return records
