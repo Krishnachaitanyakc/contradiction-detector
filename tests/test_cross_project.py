@@ -2,11 +2,11 @@
 
 import pytest
 
-from autoresearch_contradict.cross_project import (
+from contradiction_detector.cross_project import (
     cross_analyze, format_cross_analysis, CrossProjectContradiction,
 )
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 TSV_PROJECT_A = """commit\tmetric_value\tmemory_gb\tstatus\tdescription

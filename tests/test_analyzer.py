@@ -1,7 +1,7 @@
 """Tests for full pipeline analyzer."""
 
 import pytest
-from autoresearch_contradict.analyzer import ContradictionAnalyzer, AnalysisReport
+from contradiction_detector.analyzer import ContradictionAnalyzer, AnalysisReport
 
 
 SAMPLE_TSV = """commit\tmetric_value\tmemory_gb\tstatus\tdescription

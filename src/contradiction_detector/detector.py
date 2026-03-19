@@ -6,8 +6,8 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from typing import List
 
-from autoresearch_contradict.embedder import SimpleEmbedder
-from autoresearch_contradict.parser import ExperimentParser, ExperimentRecord
+from contradiction_detector.embedder import SimpleEmbedder
+from contradiction_detector.parser import ExperimentParser, ExperimentRecord
 
 CHANGE_TYPE_SPECIFICITY = {
     "lr_change": 0.9,

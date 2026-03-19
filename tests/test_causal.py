@@ -2,11 +2,11 @@
 
 import pytest
 
-from autoresearch_contradict.causal import (
+from contradiction_detector.causal import (
     identify_confounders, Confounder, CausalAnalysis,
 )
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 class TestIdentifyConfounders:

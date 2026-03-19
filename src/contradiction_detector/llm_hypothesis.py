@@ -5,8 +5,8 @@ from __future__ import annotations
 import os
 from typing import List
 
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.hypothesis import Hypothesis, HypothesisGenerator
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.hypothesis import Hypothesis, HypothesisGenerator
 
 
 def generate_llm_hypotheses(

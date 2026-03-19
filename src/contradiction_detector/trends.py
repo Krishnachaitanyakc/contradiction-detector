@@ -5,8 +5,8 @@ from __future__ import annotations
 from datetime import datetime
 from typing import List, Optional, Tuple
 
-from autoresearch_contradict.detector import Contradiction, ContradictionDetector
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction, ContradictionDetector
+from contradiction_detector.parser import ExperimentRecord
 
 
 def parse_timestamp(ts: Optional[str]) -> Optional[datetime]:

@@ -2,7 +2,7 @@
 
 import pytest
 from click.testing import CliRunner
-from autoresearch_contradict.cli import cli
+from contradiction_detector.cli import cli
 
 
 SAMPLE_TSV = """commit\tmetric_value\tmemory_gb\tstatus\tdescription

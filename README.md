@@ -1,4 +1,4 @@
-# autoresearch-contradict
+# contradiction-detector
 
 Detect contradictory experiment results and generate hypotheses explaining the contradictions.
 
@@ -23,22 +23,22 @@ pip install -e ".[dev]"
 
 ```bash
 # Run full analysis pipeline
-autoresearch-contradict analyze results.tsv
+contradiction-detector analyze results.tsv
 
 # List found contradictions
-autoresearch-contradict contradictions results.tsv
+contradiction-detector contradictions results.tsv
 
 # Show generated hypotheses
-autoresearch-contradict hypotheses results.tsv
+contradiction-detector hypotheses results.tsv
 
 # Generate markdown report
-autoresearch-contradict report results.tsv
+contradiction-detector report results.tsv
 ```
 
 ### Python API
 
 ```python
-from autoresearch_contradict.analyzer import ContradictionAnalyzer
+from contradiction_detector.analyzer import ContradictionAnalyzer
 
 analyzer = ContradictionAnalyzer()
 report = analyzer.analyze("results.tsv")

@@ -1,7 +1,7 @@
 """Tests for new change type categories."""
 
 import pytest
-from autoresearch_contradict.parser import ExperimentParser
+from contradiction_detector.parser import ExperimentParser
 
 
 class TestNewChangeCategories:

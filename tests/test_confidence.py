@@ -1,8 +1,8 @@
 """Tests for confidence scoring on contradictions."""
 
 import pytest
-from autoresearch_contradict.detector import ContradictionDetector, Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import ContradictionDetector, Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 class TestConfidenceScoring:

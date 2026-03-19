@@ -3,11 +3,11 @@
 import pytest
 from unittest.mock import patch
 
-from autoresearch_contradict.memory_integration import (
+from contradiction_detector.memory_integration import (
     query_similar_contradictions, enrich_contradiction_context,
 )
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 def _make_contradiction():

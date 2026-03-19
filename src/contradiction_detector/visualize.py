@@ -8,9 +8,9 @@ import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.embedder import SimpleEmbedder
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.embedder import SimpleEmbedder
+from contradiction_detector.parser import ExperimentRecord
 
 
 def compute_embeddings_2d(

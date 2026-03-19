@@ -1,7 +1,7 @@
 """Tests for embedder."""
 
 import pytest
-from autoresearch_contradict.embedder import SimpleEmbedder
+from contradiction_detector.embedder import SimpleEmbedder
 
 
 class TestSimpleEmbedder:

@@ -1,7 +1,7 @@
 """Tests for experiment parser."""
 
 import pytest
-from autoresearch_contradict.parser import ExperimentParser, ExperimentRecord
+from contradiction_detector.parser import ExperimentParser, ExperimentRecord
 
 
 SAMPLE_TSV = """commit\tmetric_value\tmemory_gb\tstatus\tdescription

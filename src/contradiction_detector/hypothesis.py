@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
-from autoresearch_contradict.detector import Contradiction
+from contradiction_detector.detector import Contradiction
 
 
 @dataclass

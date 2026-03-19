@@ -4,9 +4,9 @@ import os
 import pytest
 import numpy as np
 
-from autoresearch_contradict.visualize import compute_embeddings_2d, plot_clusters
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.visualize import compute_embeddings_2d, plot_clusters
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 class TestComputeEmbeddings2D:

@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "autoresearch-contradict"
+name = "contradiction-detector"
 version = "0.1.0"
 description = "Detect contradictory experiment results and generate hypotheses"
 readme = "README.md"
@@ -25,7 +25,7 @@ dev = [
 ]
 
 [project.scripts]
-autoresearch-contradict = "autoresearch_contradict.cli:cli"
+contradiction-detector = "contradiction_detector.cli:cli"
 
 [tool.setuptools.packages.find]
 where = ["src"]

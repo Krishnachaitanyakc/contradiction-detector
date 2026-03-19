@@ -1,4 +1,4 @@
-"""CLI for autoresearch-contradict."""
+"""CLI for contradiction-detector."""
 
 from __future__ import annotations
 
@@ -6,12 +6,12 @@ import os
 
 import click
 
-from autoresearch_contradict.analyzer import ContradictionAnalyzer
+from contradiction_detector.analyzer import ContradictionAnalyzer
 
 
 @click.group()
 def cli() -> None:
-    """autoresearch-contradict: Detect contradictory experiment results."""
+    """contradiction-detector: Detect contradictory experiment results."""
 
 
 def _get_analyzer() -> ContradictionAnalyzer:
@@ -70,7 +70,7 @@ def hypotheses(filepath: str, baseline: float, llm: bool) -> None:
     report = analyzer.analyze_file(filepath)
 
     if llm and report.contradictions:
-        from autoresearch_contradict.llm_hypothesis import generate_llm_hypotheses
+        from contradiction_detector.llm_hypothesis import generate_llm_hypotheses
 
         all_hypotheses = []
         for c in report.contradictions:
@@ -125,7 +125,7 @@ def visualize(filepath: str, baseline: float, method: str, output: str) -> None:
     analyzer = ContradictionAnalyzer(baseline_metric=baseline)
     report_data = analyzer.analyze_file(filepath)
 
-    from autoresearch_contradict.visualize import plot_clusters
+    from contradiction_detector.visualize import plot_clusters
 
     plot_clusters(
         report_data.experiments,
@@ -146,8 +146,8 @@ def trends(filepath: str, baseline: float) -> None:
         click.echo(f"Error: File not found: {filepath}")
         raise SystemExit(1)
 
-    from autoresearch_contradict.parser import ExperimentParser
-    from autoresearch_contradict.trends import analyze_trends, format_trends_report
+    from contradiction_detector.parser import ExperimentParser
+    from contradiction_detector.trends import analyze_trends, format_trends_report
 
     parser = ExperimentParser()
     experiments = parser.parse_tsv_file(filepath)
@@ -165,7 +165,7 @@ def cross_analyze_cmd(filepaths: tuple, baseline: float) -> None:
             click.echo(f"Error: File not found: {fp}")
             raise SystemExit(1)
 
-    from autoresearch_contradict.cross_project import cross_analyze, format_cross_analysis
+    from contradiction_detector.cross_project import cross_analyze, format_cross_analysis
 
     results = cross_analyze(list(filepaths), baseline_metric=baseline)
     click.echo(format_cross_analysis(results))

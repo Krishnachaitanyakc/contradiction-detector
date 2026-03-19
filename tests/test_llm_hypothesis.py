@@ -3,12 +3,12 @@
 import pytest
 from unittest.mock import patch, MagicMock
 
-from autoresearch_contradict.llm_hypothesis import (
+from contradiction_detector.llm_hypothesis import (
     generate_llm_hypotheses, _parse_llm_response, _fallback,
 )
-from autoresearch_contradict.hypothesis import Hypothesis
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.hypothesis import Hypothesis
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 def _make_contradiction():

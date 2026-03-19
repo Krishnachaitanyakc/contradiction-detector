@@ -6,9 +6,9 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import List
 
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.embedder import SimpleEmbedder
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.embedder import SimpleEmbedder
+from contradiction_detector.parser import ExperimentRecord
 
 
 @dataclass

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any, List
 
-from autoresearch_contradict.detector import Contradiction
+from contradiction_detector.detector import Contradiction
 
 
 def query_similar_contradictions(

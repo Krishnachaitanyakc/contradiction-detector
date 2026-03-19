@@ -5,8 +5,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
-from autoresearch_contradict.detector import Contradiction, ContradictionDetector
-from autoresearch_contradict.parser import ExperimentParser, ExperimentRecord
+from contradiction_detector.detector import Contradiction, ContradictionDetector
+from contradiction_detector.parser import ExperimentParser, ExperimentRecord
 
 
 @dataclass

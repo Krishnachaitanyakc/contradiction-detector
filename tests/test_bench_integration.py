@@ -3,11 +3,11 @@
 import pytest
 from unittest.mock import patch, MagicMock
 
-from autoresearch_contradict.bench_integration import (
+from contradiction_detector.bench_integration import (
     search_related_papers, format_paper_context,
 )
-from autoresearch_contradict.detector import Contradiction
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.detector import Contradiction
+from contradiction_detector.parser import ExperimentRecord
 
 
 def _make_contradiction():

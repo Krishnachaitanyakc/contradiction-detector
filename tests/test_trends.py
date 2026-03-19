@@ -1,10 +1,10 @@
 """Tests for time-series analysis."""
 
 import pytest
-from autoresearch_contradict.trends import (
+from contradiction_detector.trends import (
     parse_timestamp, sort_by_time, analyze_trends, format_trends_report,
 )
-from autoresearch_contradict.parser import ExperimentRecord
+from contradiction_detector.parser import ExperimentRecord
 
 
 class TestParseTimestamp:
@@ -85,7 +85,7 @@ class TestFormatTrendsReport:
         assert "No contradiction trends" in result
 
     def test_non_empty_timeline(self):
-        from autoresearch_contradict.detector import Contradiction
+        from contradiction_detector.detector import Contradiction
         timeline = [{
             "timestamp": "2024-01-10T00:00:00",
             "new_experiment": "c2",
