@@ -1,0 +1,15 @@
+commit	metric_value	memory_gb	status	description
+p1q2r3s	0.7560	4.0	degraded	Increased learning rate from 0.001 to 0.01 with small batch
+t4u5v6w	0.8690	4.3	improved	Increased learning rate from 0.001 to 0.01 with large batch
+x7y8z9a	0.8410	6.5	improved	Added batch normalization to all layers
+b0c1d2e	0.7640	5.8	degraded	Added layer normalization to shallow network
+f3g4h5i	0.8950	4.9	improved	Added dropout p=0.5 to fully connected layers
+j6k7l8m	0.7730	4.7	degraded	Added dropout p=0.5 to embedding layers
+n9o0p1q	0.8280	5.3	improved	Switched optimizer from Adam to AdaGrad
+r2s3t4u	0.7850	5.1	degraded	Switched optimizer from Adam to SGD with low LR
+v5w6x7y	0.9030	4.2	improved	Applied label smoothing with factor 0.1
+z8a9b0c	0.7970	3.9	degraded	Increased batch size from 64 to 256 without warmup
+d1e2f3g	0.8560	4.4	improved	Added cosine learning rate schedule
+h4i5j6k	0.7680	4.1	degraded	Decreased learning rate from 0.01 to 0.0001 fixed schedule
+l7m8n9o	0.8870	7.2	improved	Doubled transformer attention heads from 4 to 8
+p0q1r2s	0.7430	6.9	degraded	Added extra attention layer to already deep model

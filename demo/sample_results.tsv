@@ -1,0 +1,21 @@
+commit	metric_value	memory_gb	status	description
+a1b2c3d	0.8350	4.2	improved	Increased learning rate from 0.001 to 0.01
+e4f5g6h	0.7480	4.1	degraded	Increased learning rate from 0.001 to 0.01 on larger model
+i7j8k9l	0.8720	4.5	improved	Decreased learning rate from 0.01 to 0.001 with cosine schedule
+m0n1o2p	0.7650	4.3	degraded	Decreased learning rate from 0.01 to 0.001 with warmup
+q3r4s5t	0.8910	6.8	improved	Added skip connections to ResNet backbone
+u6v7w8x	0.7390	5.2	degraded	Added skip connections to shallow CNN
+y9z0a1b	0.8580	8.1	improved	Increased hidden size from 256 to 512 in transformer
+c2d3e4f	0.7710	7.9	degraded	Increased hidden size from 256 to 512 in MLP
+g5h6i7j	0.8830	4.6	improved	Added dropout p=0.3 after attention layers
+k8l9m0n	0.7520	4.4	degraded	Added dropout p=0.3 after convolutional layers
+o1p2q3r	0.8640	4.8	improved	Increased weight decay from 1e-4 to 1e-3
+s4t5u6v	0.7690	4.7	degraded	Increased weight decay from 1e-4 to 1e-3 on small dataset
+w7x8y9z	0.8470	5.1	improved	Switched optimizer from SGD to Adam
+a0b1c2d	0.7810	5.0	degraded	Switched optimizer from SGD to Adam with high momentum
+e3f4g5h	0.9120	4.3	improved	Added mixup augmentation alpha=0.2
+i6j7k8l	0.8210	4.2	improved	Added random crop and horizontal flip augmentation
+m9n0o1p	0.8050	3.8	improved	Increased batch size from 32 to 128
+q2r3s4t	0.7880	3.9	degraded	Increased batch size from 32 to 128 without LR scaling
+u5v6w7x	0.8760	4.0	improved	Added warmup schedule for first 1000 steps
+y8z9a0b	0.7930	4.1	degraded	Switched to Kaiming weight initialization
